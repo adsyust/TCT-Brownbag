@@ -18,18 +18,7 @@
             android:layout_centerInParent="true"
             android:text="@string/label_subscribe"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
-
-        <ImageButton
-            android:id="@+id/right_btn"
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/title_btn_right"
-            android:onClick="btnmainright"
-            android:src="@drawable/title_btn_function" />
+            android:textSize="20sp" />        
     </RelativeLayout>
 
     <LinearLayout
@@ -52,19 +41,11 @@
         </EditText>
     </LinearLayout>
 
-    <RelativeLayout
+    <fragment
+        android:id="@+id/notificationList"
+        android:name="com.autodesk.icp.community.mobile.ui.ItemListFragment"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/mm_listitem"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:onClick="startchat" >
-     <ListView
-        android:id="@+id/listView"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-    </ListView>
-        
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 
 </LinearLayout>
